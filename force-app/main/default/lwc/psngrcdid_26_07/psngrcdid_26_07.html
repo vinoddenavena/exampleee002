@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="related contacts">
+        <template if:true={vinod.data}>
+            <lightning-datatable
+            key-field="Id"
+            data={vinod.data}
+            columns={colmn}
+            >
+            </lightning-datatable>
+        </template>
+
+    </lightning-card>
+</template>

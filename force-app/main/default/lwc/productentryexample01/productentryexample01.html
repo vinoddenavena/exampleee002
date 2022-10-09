@@ -1,0 +1,12 @@
+<template>
+    <lightning-layout>
+    <lightning-layout-item size="6">
+    <lightning-card title="Product Creation">
+        <lightning-input label="Product Name" onchange={productnamehandler}></lightning-input>
+        <lightning-input label="Product Price" onchange={Productpricehandler}></lightning-input>
+        <br/>
+        <lightning-button label="Create Product" onclick={saveproducthandler}></lightning-button>
+    </lightning-card>
+</lightning-layout-item>
+</lightning-layout>
+</template>

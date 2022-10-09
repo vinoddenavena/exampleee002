@@ -1,0 +1,18 @@
+<template>
+    <lightning-card >
+        <template if:true={vinod.data}>
+            <lightning-datatable
+
+            key-field="Id"
+            data={vinod.data}
+            columns={colm}
+             
+            >
+        </lightning-datatable>
+        </template>
+        <template if:true={errors}>
+            <p>{errors}</p>
+        </template>
+        
+    </lightning-card>
+</template>

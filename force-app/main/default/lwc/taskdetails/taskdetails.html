@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Activities" icon-name="standard:activations">
+        <lightning-button-group class="slds-align_absolute-center">
+            <lightning-button label="New Task" title="Non-primary action" onclick={handleClickNewTask} ></lightning-button>
+            <lightning-button label="New Event" title="Non-primary action" onclick={handleClickNewEvent} ></lightning-button>
+            <lightning-button label="Enter Multiple Activities" title="Non-primary action" onclick={handleEnterMulActivities} ></lightning-button>
+            <lightning-button label="Edit Multiple Activities" title="Non-primary action" onclick={handleClickEditActivties} ></lightning-button>
+            <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" class="slds-m-left_xx-small" title="Refresh" onclick={handleRefresh}></lightning-button-icon>
+        </lightning-button-group>
+        <br>
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" size="medium" variant="brand"></lightning-spinner>
+        </template>
+        <div style="height: 500px;">          
+            <lightning-datatable
+                                key-field="id"
+                                data={data}
+                                sorted-by={sortBy}
+                                sorted-direction={sortDirection}
+                                onsort={doSorting}
+                                columns={columns}>
+            </lightning-datatable>
+        </div>
+        </lightning-card>
+</template>
